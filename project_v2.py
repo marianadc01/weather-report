@@ -78,38 +78,41 @@ def get_number_of_iterations():
 
 
 def temp_classification(celsius):
-    emoji = "" 
+    if pd.isna(celsius):
+        return "Missing temperature data"
+
+    emoji = ""
     if celsius < 0:
         classification = "Freezing temperatures!"
         emoji = "🥶"
     elif 0 <= celsius <= 10:
         classification = "Cold temperatures"
-        emoji = "❄️"
+        emoji = "❄"
     elif 10 < celsius < 20:
         classification = "Moderate temperatures"
         emoji = "😊"
-    elif celsius >= 20:
+    else:
         classification = "Hot temperatures!"
         emoji = "🥵"
-    else:
-        classification = "Missing temperature data"    
 
     return f"{classification} {emoji}"
 
 
-def prec_classification(precipitation_mm):
-    if precipitation_mm == 0.0:
-        prec_clas = "No rain ☀️"
-    elif 0.0 < precipitation_mm <= 0.2:
-        prec_clas = "Light rain ☂️"
-    elif 0.2 < precipitation_mm < 7.6:
-        prec_clas = "Moderate rain 🌧️"
-    elif precipitation_mm >= 7.6:
-        prec_clas = "Heavy rain! 🌧️🌧️"
-    else:
-        prec_clas = "Missing precipitation data"    
 
-    return prec_clas
+def prec_classification(precipitation_mm):
+    if pd.isna(precipitation_mm):
+        return "Missing precipitation data"
+    
+    if precipitation_mm == 0.0:
+        prec_clas = "No rain ☀"
+    elif 0.0 < precipitation_mm <= 0.2:
+        prec_clas = "Light rain ☂"
+    elif 0.2 < precipitation_mm < 7.6:
+        prec_clas = "Moderate rain 🌧"
+    else:
+        prec_clas = "Heavy rain! 🌧🌧"
+  
+    return prec_clas
 
 
 def plot_weather_trend(dates, avg_temps, precipitations, city_name):
