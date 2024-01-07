@@ -1,1 +1,0 @@
-#pytest for weather.py
