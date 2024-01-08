@@ -1,5 +1,6 @@
 import pandas as pd
 import matplotlib.pyplot as plt
+from datetime import datetime
 
 class TemperatureConverter:
     def celsius_to_fahrenheit(self, celsius):
@@ -19,7 +20,8 @@ def main():
     precipitations = []
 
     for _ in range(num_iterations):
-        input_date = input("Enter a date (YYYY-MM-DD): ")
+        input_date = get_date()
+
         selected_date = city_df[city_df['date'] == input_date]
 
         if not selected_date.empty:
@@ -74,7 +76,19 @@ def get_number_of_iterations():
             else:
                 print("Please, enter a positive number of iterations.")
         except ValueError:
-            print("Invalid input. Please, enter a valid number!")            
+            print("Invalid input. Please, enter a valid number!")        
+
+
+def get_date():
+    while True:
+        input_date = input("Enter a date (YYYY-MM-DD): ")
+
+        try:
+            # Parse the input date string to a datetime object
+            input_date = datetime.strptime(input_date, "%Y-%m-%d")
+            return input_date  # Return the validated date string
+        except ValueError:
+            print("Invalid date format. Please use YYYY-MM-DD.")                
 
 
 def temp_classification(celsius):
@@ -112,7 +126,7 @@ def prec_classification(precipitation_mm):
     else:
         prec_clas = "Heavy rain! 🌧🌧"
   
-    return prec_clas
+    return prec_clas
 
 
 def plot_weather_trend(dates, avg_temps, precipitations, city_name):
