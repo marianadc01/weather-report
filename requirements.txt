@@ -2,4 +2,3 @@ requirements.txt
 
 pandas
 matplotlib.pylot
-pyarrow
