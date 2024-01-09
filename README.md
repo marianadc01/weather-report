@@ -12,19 +12,20 @@ The code used to obtain the data report contains six functions plus the main one
 - get_number_of_inerations(): a function to establish the number of dates the user can obtain information about;
 - get_date(): a function to get the specifc dates on which the user wants to collect information about;
 - temp_classification(): a function that specifies the temperature (very cold, kind of warn, etc) based on the temperature provided and it returns with emojies based on the temperture classification;
-- prec_classification(): a function similar to the previous onebut for precipitation;
+- prec_classification(): a function similar to the previous one but for precipitation;
 - and finally, plot_weather_trend(): a function to create a plot graph showing the weather trend based on those five specific dates.
 
-Besides these functions, we also implemented a class TemperatureConverter to convert tempertures provided in Celsius degrees in temperatures in both Kelvin and Fahrenheit degrees. 
+Besides these functions, we also implemented a class, class TemperatureConverter, to convert tempertures provided in Celsius degrees in temperatures in both Kelvin and Fahrenheit degrees. 
 
 The main function calls all mentioned ones and the class as well as checks if the dataset contains any values for the user's input date.   
 
-This project also includes another Python file, called test_project, with the following test functions, : - test_temp_classification(): to check if the temperature classificationfunction works properly; 
+This project also includes another Python file, called test_project, with the following test functions: 
+- test_temp_classification(): to check if the temperature classificationfunction works properly; 
 - test_prec_classification(): to do the same for the precipitation classification; 
 - test_C_to_F: to test preciseness of Celsius-Farenheit convertion (class TemperatureConverter);
 - test_C_to_K: to test preciseness of Celsius-Kelvin convertion (class TemperatureConverter).
 
-The project also includes a text file, called requirements, with all the Python packges needed for the code to work.
+And lastly, the project includes a text file, called requirements, with all the Python packges needed for the code to be used.
 
 
 
