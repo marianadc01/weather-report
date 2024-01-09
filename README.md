@@ -11,7 +11,7 @@ The code used to obtain the data report contains six functions plus the main one
 
 Besides these functions, we also implemented a class to convert tempertures provided in Celsius degrees in temperatures in both Kelvin and Fahrenheit degrees.
 
-This project also includes another .py file, called test_project, with the test functions, to make sure the code works properly and a .txt file, called requeriments, with all the Python packges needed for the code to work.
+This project also includes another Python file, called test_project, with the test functions, to make sure the code works properly, as well as a text file, called requeriments, with all the Python packges needed for the code to work.
 
 
 
