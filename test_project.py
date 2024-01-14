@@ -14,7 +14,7 @@ def test_prec_classification():
     assert prec_classification(0.1) == "Light rain ☂️"
     assert prec_classification(7.5) == "Moderate rain 🌧️"
     assert prec_classification(10.0) == "Heavy rain! 🌧️🌧️"
-    assert prec_classification(None) == "Missing precipitation data"#pytest for weather.py
+    assert prec_classification(None) == "Missing precipitation data"
 
 
 # test the functions inside the class TemperatureConverter
