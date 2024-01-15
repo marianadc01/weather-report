@@ -133,8 +133,8 @@ def plot_weather_trend(dates, avg_temps, precipitations, city_name):
     trend_df = pd.DataFrame({'Date': dates, 'Average Temperature': avg_temps, 'Precipitation': precipitations})
 
     plt.figure(figsize=(10, 6))
-    plt.plot(trend_df['Date'], trend_df['Average Temperature'], label='Average Temperature', marker='o', color='orange')
-    plt.plot(trend_df['Date'], trend_df['Precipitation'], label='Precipitation', marker='o', color='blue')
+    plt.plot(trend_df['Date'], trend_df['Average Temperature (C)'], label='Average Temperature', marker='o', color='orange')
+    plt.plot(trend_df['Date'], trend_df['Precipitation (mm)'], label='Precipitation', marker='o', color='blue')
     plt.xlabel('Date')
     plt.ylabel('Value')
     plt.title(f'Temperature and Precipitation Trend in {city_name}')
