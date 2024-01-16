@@ -5,7 +5,7 @@
 
 For our final project for the class Introduction to Python, we have decided to create a code to provide the user with a weather report for almost any city in the world in any date of choice, and in the end, it gives a trend plot graph.
 
-The data set that was chosen to implement in this project was obtained in Keggle and it's called [The Weather Dataset](https://www.kaggle.com/datasets/guillemservera/global-daily-climate-data/data). The data obtained can be found in the daily_weather.parquet file. This dataset was created by Guillem Servera and contains weather reports form several cities dating all the way back to January 2nd, 1833. The dataset was updated weekly usisng data from Meteostat API, until four months ago when this stopped, therefore the user is restricted to only access weather data until August of 2023.
+The data set that was chosen to implement in this project was obtained in Kaggle and it's called [The Weather Dataset](https://www.kaggle.com/datasets/guillemservera/global-daily-climate-data/data). The data obtained can be found in the daily_weather.parquet file, which needs to be downloaded from Kaggle, extracted from a zip file and put in the same place as the code is being stored so the code can access it. This dataset was created by Guillem Servera and contains weather reports form several cities dating all the way back to January 2nd, 1833. The dataset was updated weekly usisng data from Meteostat API, until four months ago when this stopped, therefore the user is restricted to only access weather data until August of 2023.
 
 The code used to obtain the data report contains six functions plus the main one. The six functions are: 
 - get_city(): a function to get the city weather data from the .parquet file from the dataset;
