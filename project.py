@@ -101,7 +101,7 @@ def temp_classification(celsius):
         emoji = "🥶"
     elif 0 <= celsius <= 10:
         classification = "Cold temperatures"
-        emoji = "❄"
+        emoji = "❄️"
     elif 10 < celsius < 20:
         classification = "Moderate temperatures"
         emoji = "😊"
@@ -118,13 +118,13 @@ def prec_classification(precipitation_mm):
         return "Missing precipitation data"
     
     if precipitation_mm == 0.0:
-        prec_clas = "No rain ☀"
+        prec_clas = "No rain ☀️"
     elif 0.0 < precipitation_mm <= 0.2:
-        prec_clas = "Light rain ☂"
+        prec_clas = "Light rain ☂️"
     elif 0.2 < precipitation_mm < 7.6:
-        prec_clas = "Moderate rain 🌧"
+        prec_clas = "Moderate rain 🌧️"
     else:
-        prec_clas = "Heavy rain! 🌧🌧"
+        prec_clas = "Heavy rain! 🌧️🌧️"
   
     return prec_clas
 
@@ -133,8 +133,8 @@ def plot_weather_trend(dates, avg_temps, precipitations, city_name):
     trend_df = pd.DataFrame({'Date': dates, 'Average Temperature': avg_temps, 'Precipitation': precipitations})
 
     plt.figure(figsize=(10, 6))
-    plt.plot(trend_df['Date'], trend_df['Average Temperature (C)'], label='Average Temperature', marker='o', color='orange')
-    plt.plot(trend_df['Date'], trend_df['Precipitation (mm)'], label='Precipitation', marker='o', color='blue')
+    plt.plot(trend_df['Date'], trend_df['Average Temperature'], label='Average Temperature (C)', marker='o', color='orange')
+    plt.plot(trend_df['Date'], trend_df['Precipitation'], label='Precipitation (mm)', marker='o', color='blue')
     plt.xlabel('Date')
     plt.ylabel('Value')
     plt.title(f'Temperature and Precipitation Trend in {city_name}')
