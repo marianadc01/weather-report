@@ -32,15 +32,3 @@ def test_C_to_K():
     assert converter.celsius_to_kelvin(100) == 373.15 
 
 
-## def test_get_date():
-    ## assert get_date(31-12-2000) == "Invalid date format. Please use YYYY-MM-DD."
-    ## assert get_date(12-31-2000) == "Invalid date format. Please use YYYY-MM-DD."
-    ## assert get_date(2000-12-32) == "Invalid date. Please try again." """ 
-
-# The function in the project.py doesn't have any agruments, 
-# so it has a name get_date() with empty brackets, but when you test it, you put some dates inside the brackets, 
-# that's why there's an error
-    
-
-
- 
