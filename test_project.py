@@ -19,7 +19,7 @@ def test_prec_classification():
 def test_get_date():
     assert get_date(31-12-2000) == "Invalid date format. Please use YYYY-MM-DD."
     assert get_date(12-31-2000) == "Invalid date format. Please use YYYY-MM-DD."
-    assert get_date(2000-02-31) == "Invalid date. Please try again."
+    assert get_date(2000-12-32) == "Invalid date. Please try again."
 
 
 # test the functions inside the class TemperatureConverter
